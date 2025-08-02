@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Definitive UI Kit: 20 Components, Fully Functional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher-wrapper"><i class="fas fa-sun"></i><label class="theme-switcher"><input type="checkbox" id="themeToggle"><span class="switcher-slider"></span></label><i class="fas fa-moon"></i></div>
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Sidebars -->
+    <aside id="glassSidebar" class="sidebar glass-sidebar"><div class="sidebar-content"><div class="sidebar-header"><img class="sidebar-avatar" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="Avatar"><h3>User Name</h3></div><div class="sidebar-links"><a href="#"><i class="fas fa-home"></i> Головна</a><a href="#"><i class="fas fa-user"></i> Профіль</a><a href="#"><i class="fas fa-envelope"></i> Повідомлення</a><a href="#"><i class="fas fa-cog"></i> Налаштування</a></div><div class="sidebar-footer"><a href="#"><i class="fas fa-sign-out-alt"></i> Вийти</a></div></div></aside>
+    <aside id="neumorphismSidebar" class="sidebar neumorphism-sidebar"><div class="sidebar-content"><div class="sidebar-header"><h3>Меню</h3></div><div class="sidebar-links"><a href="#"><i class="fas fa-home"></i> Головна</a><a href="#"><i class="fas fa-box-open"></i> Продукти</a><a href="#"><i class="fas fa-info-circle"></i> Про нас</a><a href="#"><i class="fas fa-phone"></i> Контакти</a></div><div class="sidebar-footer"><a href="#">Вийти <i class="fas fa-sign-out-alt"></i></a></div></div></aside>
+
+    <div class="container">
+        <h1>Definitive UI Kit</h1>
+
+        <!-- ======================= Glassmorphism Section ======================= -->
+        <section class="style-section anim-on-scroll">
+            <h2 class="section-title">Glassmorphism</h2>
+            <div class="showcase-container glass-showcase-container">
+                <nav class="navbar glass-nav"><div class="logo">GlassUI</div><div class="nav-links"><a href="#">Головна</a><a href="#">Продукти</a></div><div class="nav-extra"><div class="icon-badge-wrapper"><i class="fas fa-bell"></i><span class="badge">3</span></div><button class="glass-btn icon-btn" onclick="openSidebar('glassSidebar')"><i class="fas fa-bars"></i></button></div></nav>
+                <div class="component-grid">
+                    <div class="element-showcase"><h3>1. Кнопки</h3><div class="button-group"><button class="glass-btn">Стандартна</button><button class="glass-btn icon-btn"><i class="fas fa-heart"></i></button><button class="glass-btn pill-btn">Pill <i class="fas fa-arrow-right"></i></button></div></div>
+                    <div class="element-showcase"><h3>2. Картки</h3><div class="glass-card"><img src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg" alt="Nature"><div class="card-content"><h4>Зимовий пейзаж</h4><p>Картка з фото в стилі Glassmorphism.</p></div></div></div>
+                    <div class="element-showcase center-content"><h3>3. Спливаючі вікна</h3><button class="glass-btn" onclick="openModal('glassModal')">Показати вікно</button></div>
+                    <div class="element-showcase center-content"><h3>4. Спадні меню</h3><div class="dropdown"><button class="glass-btn dropdown-toggle">Опції <i class="fas fa-caret-down"></i></button><div class="dropdown-content glass-dropdown-content"><a href="#">Профіль</a><a href="#">Налаштування</a><a href="#">Вийти</a></div></div></div>
+                    <div class="element-showcase"><h3>5. Акордеони</h3><div class="accordion glass-accordion"><div class="accordion-item"><button class="accordion-header">Секція 1 <i class="fas fa-chevron-down"></i></button><div class="accordion-content"><p>Контент першої секції.</p></div></div><div class="accordion-item"><button class="accordion-header">Секція 2 <i class="fas fa-chevron-down"></i></button><div class="accordion-content"><p>Контент другої секції.</p></div></div></div></div>
+                    <div class="element-showcase"><h3>6. Вкладки</h3><div class="tabs glass-tabs"><div class="tab-headers"><button class="tab-link active" data-tab="glass-tab-1">Вкладка 1</button><button class="tab-link" data-tab="glass-tab-2">Вкладка 2</button></div><div id="glass-tab-1" class="tab-content active"><p>Контент першої вкладки.</p></div><div id="glass-tab-2" class="tab-content"><p>Контент другої вкладки.</p></div></div></div>
+                    <div class="element-showcase"><h3>7. Поля вводу</h3><input type="text" class="glass-input" placeholder="Введіть текст..."></div>
+                    <div class="element-showcase"><h3>8. Елементи вибору</h3><div class="controls-group"><label class="custom-checkbox glass-checkbox">Чекбокс<input type="checkbox" checked><span class="checkmark"></span></label><label class="custom-radio glass-radio">Радіо<input type="radio" name="g-radio" checked><span class="radiomark"></span></label></div></div>
+                    <div class="element-showcase"><h3>9. Перемикачі</h3><label class="toggle-switch glass-toggle"><input type="checkbox"><span class="slider"></span></label></div>
+                    <div class="element-showcase"><h3>10. Слайдери та прогрес</h3><div class="progress-bar-container glass-progress"><div class="progress-fill" style="width: 75%;">75%</div></div><input type="range" class="slider-custom glass-slider" value="50"></div>
+                    <div class="element-showcase"><h3>11. Пагінація</h3><div class="pagination glass-pagination" id="glass-pagination"><a href="#">«</a><a href="#" class="active">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">»</a></div></div>
+                    <div class="element-showcase"><h3>12. Аватари</h3><div class="avatar-container"><img class="avatar" src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg"><span class="status-dot online"></span></div></div>
+                    <div class="element-showcase center-content"><h3>13. Підказки</h3><button class="glass-btn" data-tooltip="Це спливаюча підказка!">Наведи на мене</button></div>
+                    <div class="element-showcase"><h3>14. Сповіщення</h3><div class="alert-stack"><div class="alert glass-alert-success"><i class="fas fa-check-circle"></i> Успішно!</div><div class="alert glass-alert-danger"><i class="fas fa-times-circle"></i> Помилка!</div></div></div>
+                    <div class="element-showcase center-content"><h3>15. Завантажувачі</h3><div class="loader-spinner glass-loader"></div></div>
+                    <div class="element-showcase"><h3>16. Рейтинг (Зірки)</h3><div class="rating-stars glass-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div></div>
+                    <div class="element-showcase"><h3>17. Текстова область</h3><textarea class="textarea glass-textarea" rows="4" placeholder="Введіть довший текст..."></textarea></div>
+                    <div class="element-showcase"><h3>18. Кроки (Stepper)</h3><div class="stepper glass-stepper"><div class="step active"><span>1</span></div><div class="step"><span>2</span></div><div class="step"><span>3</span></div></div></div>
+                    <div class="element-showcase"><h3>19. Вибір дати</h3><div class="datepicker-wrapper glass-datepicker"><input type="date"></div></div>
+                    <div class="element-showcase"><h3>20. Завантаження файлу</h3><label class="file-upload-wrapper glass-file-upload"><i class="fas fa-upload"></i> <span class="file-name">Вибрати файл</span><input type="file"></label></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================= Neumorphism Section ======================= -->
+        <section class="style-section anim-on-scroll">
+            <h2 class="section-title-neumorph">Neumorphism</h2>
+            <div class="showcase-container neumorphism-showcase-container">
+                <nav class="navbar neumorphism-nav"><div class="logo">NeumorphUI</div><div class="nav-links"><a href="#">Головна</a><a href="#">Продукти</a></div><div class="nav-extra"><div class="icon-badge-wrapper"><i class="fas fa-bell"></i><span class="badge">3</span></div><button class="neumorphism-btn icon-btn" onclick="openSidebar('neumorphismSidebar')"><i class="fas fa-bars"></i></button></div></nav>
+                <div class="component-grid">
+                    <div class="element-showcase"><h3>1. Кнопки</h3><div class="button-group"><button class="neumorphism-btn">Стандартна</button><button class="neumorphism-btn icon-btn"><i class="fas fa-thumbs-up"></i></button><button class="neumorphism-btn pill-btn">Pill <i class="fas fa-rocket"></i></button></div></div>
+                    <div class="element-showcase"><h3>2. Картки</h3><div class="neumorphism-card"><img src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg" alt="Nature"><div class="card-content"><h4>Гірський пейзаж</h4><p>Картка з фото в стилі Neumorphism.</p></div></div></div>
+                    <div class="element-showcase center-content"><h3>3. Спливаючі вікна</h3><button class="neumorphism-btn" onclick="openModal('neumorphismModal')">Показати вікно</button></div>
+                    <div class="element-showcase center-content"><h3>4. Спадні меню</h3><div class="dropdown"><button class="neumorphism-btn dropdown-toggle">Опції <i class="fas fa-caret-down"></i></button><div class="dropdown-content neumorphism-dropdown-content"><a href="#">Профіль</a><a href="#">Налаштування</a><a href="#">Вийти</a></div></div></div>
+                    <div class="element-showcase"><h3>5. Акордеони</h3><div class="accordion neumorphism-accordion"><div class="accordion-item"><button class="accordion-header">Секція 1 <i class="fas fa-chevron-down"></i></button><div class="accordion-content"><p>Контент першої секції.</p></div></div><div class="accordion-item"><button class="accordion-header">Секція 2 <i class="fas fa-chevron-down"></i></button><div class="accordion-content"><p>Контент другої секції.</p></div></div></div></div>
+                    <div class="element-showcase"><h3>6. Вкладки</h3><div class="tabs neumorphism-tabs"><div class="tab-headers"><button class="tab-link active" data-tab="neo-tab-1">Вкладка 1</button><button class="tab-link" data-tab="neo-tab-2">Вкладка 2</button></div><div id="neo-tab-1" class="tab-content active"><p>Контент першої вкладки.</p></div><div id="neo-tab-2" class="tab-content"><p>Контент другої вкладки.</p></div></div></div>
+                    <div class="element-showcase"><h3>7. Поля вводу</h3><input type="text" class="neumorphism-input" placeholder="Введіть текст..."></div>
+                    <div class="element-showcase"><h3>8. Елементи вибору</h3><div class="controls-group"><label class="custom-checkbox neumorphism-checkbox">Чекбокс<input type="checkbox" checked><span class="checkmark"></span></label><label class="custom-radio neumorphism-radio">Радіо<input type="radio" name="n-radio" checked><span class="radiomark"></span></label></div></div>
+                    <div class="element-showcase"><h3>9. Перемикачі</h3><label class="toggle-switch neumorphism-toggle"><input type="checkbox"><span class="slider"></span></label></div>
+                    <div class="element-showcase"><h3>10. Слайдери та прогрес</h3><div class="progress-bar-container neumorphism-progress"><div class="progress-fill" style="width: 60%;">60%</div></div><input type="range" class="slider-custom neumorphism-slider" value="50"></div>
+                    <div class="element-showcase"><h3>11. Пагінація</h3><div class="pagination neumorphism-pagination" id="neumorphism-pagination"><a href="#">«</a><a href="#" class="active">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">»</a></div></div>
+                    <div class="element-showcase"><h3>12. Аватари</h3><div class="avatar-container neumorphism-avatar"><img class="avatar" src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg"><span class="status-dot offline"></span></div></div>
+                    <div class="element-showcase center-content"><h3>13. Підказки</h3><button class="neumorphism-btn" data-tooltip="Це спливаюча підказка!">Наведи на мене</button></div>
+                    <div class="element-showcase"><h3>14. Сповіщення</h3><div class="alert-stack"><div class="alert neumorphism-alert-success"><i class="fas fa-check-circle"></i> Успішно!</div><div class="alert neumorphism-alert-danger"><i class="fas fa-times-circle"></i> Помилка!</div></div></div>
+                    <div class="element-showcase center-content"><h3>15. Завантажувачі</h3><div class="loader-spinner neumorphism-loader"></div></div>
+                    <div class="element-showcase"><h3>16. Рейтинг (Зірки)</h3><div class="rating-stars neumorphism-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></div></div>
+                    <div class="element-showcase"><h3>17. Текстова область</h3><textarea class="textarea neumorphism-textarea" rows="4" placeholder="Введіть довший текст..."></textarea></div>
+                    <div class="element-showcase"><h3>18. Кроки (Stepper)</h3><div class="stepper neumorphism-stepper"><div class="step active"><span>1</span></div><div class="step"><span>2</span></div><div class="step"><span>3</span></div></div></div>
+                    <div class="element-showcase"><h3>19. Вибір дати</h3><div class="datepicker-wrapper neumorphism-datepicker"><input type="date"></div></div>
+                    <div class="element-showcase"><h3>20. Завантаження файлу</h3><label class="file-upload-wrapper neumorphism-file-upload"><i class="fas fa-upload"></i> <span class="file-name">Вибрати файл</span><input type="file"></label></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modals and Tooltip container -->
+    <div id="glassModal" class="modal"><div class="modal-content glass-modal-content"><span class="close" onclick="closeModal('glassModal')">×</span><h2>Спливаюче вікно</h2><p>Це анімоване вікно. Воно з'являється плавно.</p></div></div>
+    <div id="neumorphismModal" class="modal"><div class="modal-content neumorphism-modal-content"><span class="close" onclick="closeModal('neumorphismModal')">×</span><h2>Спливаюче вікно</h2><p>Це анімоване вікно. Воно з'являється плавно.</p></div></div>
+    <div id="tooltip"></div>
+    <script src="script.js"></script>
+</body>
+</html>
