@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Аналітика торгівлі енергією - EnergyHub</title>
+
+    <link rel="icon" type="image/png" href="../img/icon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="../common/header.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="../config.js"></script>
+    <script src="../common/header.js"></script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <div class="filters-bar">
+            <div class="filter-group">
+                <label for="monthSelect">Період:</label>
+                <select id="monthSelect" class="filter-select"></select>
+            </div>
+
+            <div class="last-updated-badge">
+                <i class="fas fa-clock"></i>
+                <span>Оновлено: </span>
+                <span id="lastUpdatedTime">--.--.---- --:--</span>
+            </div>
+        </div>
+
+        <div class="summary-section">
+            <div class="summary-card total-profit">
+                <div class="summary-icon"><i class="fas fa-wallet"></i></div>
+                <div class="summary-info">
+                    <span class="summary-label">Загальний прибуток</span>
+                    <div class="summary-value-row">
+                        <span class="summary-value" id="totalProfit">0</span>
+                        <span class="summary-unit">млн. грн</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-card best-station">
+                <div class="summary-icon"><i class="fas fa-trophy"></i></div>
+                <div class="summary-info">
+                    <span class="summary-label">Найкращий результат</span>
+                    <span class="summary-value" id="bestStation">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="dashboardGrid" class="grid-container"></div>
+    </main>
+
+    <footer class="footer">
+        &copy; 2025-2026 EnergyHub | Розроблено відділом агрегації KNESS Energy
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
